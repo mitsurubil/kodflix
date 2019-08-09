@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowsAndMovies from './ShowsAndMovies';
 import Frozen from './images/frozen-pic.jpg';
 import TheWizardofOz from './images/wizard-of-oz-pic.jpg';
 import PsILoveYou from './images/ps-i-love-you-pic.jpg';
@@ -11,44 +12,14 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="item">
-          <img src={Frozen} alt="Frozen" />
-          <div className="overlay">
-            <h1>Frozen</h1>
-          </div>
-        </div>
-        <div className="item">
-          <img src={TheWizardofOz} alt="The Wizard of Oz" />
-          <div className="overlay">
-            <h1>The Wizard of Oz</h1>
-          </div>
-        </div>
-        <div className="item">
-          <img src={PsILoveYou} alt="P.s. I love You" />
-          <div className="overlay">
-            <h1>P.s. I love You</h1>
-          </div>
-        </div>
+        <ShowsAndMovies name='Frozen' img={Frozen} />
+        <ShowsAndMovies name='The Wizard of Oz' img={TheWizardofOz} />
+        <ShowsAndMovies name='P.s. I Love You' img={PsILoveYou} />
       </div>
       <div className="container">
-        <div className="item">
-          <img src={MortalKombat} alt="Mortal Kombat" />
-          <div className="overlay">
-            <h1>Mortal Kombat</h1>
-          </div>
-        </div>
-        <div className="item">
-          <img src={GameofThrones} alt="Game of Thrones" />
-          <div className="overlay">
-            <h1>Game of Thrones</h1>
-          </div>
-        </div>
-        <div className="item">
-          <img src={TheBoys} alt="The Boys" />
-          <div className="overlay">
-            <h1>The Boys</h1>
-          </div>
-        </div>
+        <ShowsAndMovies name='Mortal Kombat' img={MortalKombat} />
+        <ShowsAndMovies name='Game of Thrones' img={GameofThrones} />
+        <ShowsAndMovies name='The Boys' img={TheBoys} />
       </div>
     </div>
   );
