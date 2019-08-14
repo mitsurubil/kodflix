@@ -1,5 +1,12 @@
 img {
   width: 100%;
+  height: 100%;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 .App {
@@ -8,7 +15,7 @@ img {
 
 .item {
   flex: 1;
-  padding: 30px;
+  /* padding: 30px; */
   border: 1px solid black;
 }
 
@@ -22,15 +29,15 @@ img {
   }
   
   .overlay {
-    transition: bottom ease 1s;
+    transition: top ease 1s;
     position: absolute;
-    bottom: -100px;
+    top: -100px;
     left: 0;
     width: 100%;
     background-color: rgba(255,255,255,.5);
   }
   
   .item:hover .overlay {
-    bottom: 5px;
+    top: 0;
   }
 }
