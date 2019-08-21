@@ -1,29 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-class Details extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'Hello, this will be the details page for each Movie & TV show :)'
-    };
-  }
-
-  componentDidMount() {
+function Details() {
+  const [welcomeMessage, setWelcomeMessage] =
+    useState('Hello, this will be the details page for each Movie & TV show :)');
+    useEffect(() => {
     setTimeout(() => {
-      this.setState({
-        welcomeMessage: 'Coming soon! :)'
-      });
+      setWelcomeMessage('Coming soon! :)')
     }, 3000);
-  }
-  render() {
-    return (
-      <Link to='/'>
-        <h1>{this.state.welcomeMessage}</h1>
-      </Link>
-    );
-  }
+  });
+  return (
+    <Link to='/'>
+      <h1>{welcomeMessage}</h1>
+    </Link>
+  );
+
+  // class Details extends React.Component {
+
+  //   constructor() {
+  //     super();
+  //     this.state = {
+  //       welcomeMessage: 'Hello, this will be the details page for each Movie & TV show :)'
+  //     };
+  //   }
+
+  //   componentDidMount() {
+  //     setTimeout(() => {
+  //       this.setState({
+  //         welcomeMessage: 'Coming soon! :)'
+  //       });
+  //     }, 3000);
+  //   }
+  //   render() {
+  //     return (
+  //       <Link to='/'>
+  //         <h1>{this.state.welcomeMessage}</h1>
+  //       </Link>
+  //     );
+  //   }
 }
 
 export default Details;
