@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path='/' component={Gallery} />
-        <Route exact path='/:Details' component={Details} />
+        <Route exact path='/:showOrMovieId' component={Details} />
       </div>
     </Router>
   );
