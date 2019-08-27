@@ -1,3 +1,11 @@
+body {
+  background-color: black;
+}
+
+.notfound {
+  color: white;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -11,16 +19,20 @@ img {
   display: block;
 }
 
-.imageShowOrMovie{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 15rem;
+.details {
+  background-color: black;
+  color: white;
 }
 
-a{
+.synopsis {
+  flex: 1;
+  flex-basis: 120px;
+  padding: 30px;
+}
+
+a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .App {
@@ -42,12 +54,28 @@ a{
   top: -200px;
   left: 0;
   width: 100%;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .item:hover .overlay {
   top: 0;
 }
 
-/* @media only screen and (min-width: 768px) {
-} */
+@media only screen and (min-width: 768px) {
+  .synopsis {
+    display: flex;
+  }
+
+  .synopsis p {
+    padding-right: 15px;
+    width: 70%;
+    text-align: initial;
+    text-indent: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .synopsis img {
+    padding-left: 15px;
+    width: 30%;
+  }
+}
