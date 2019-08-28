@@ -30,6 +30,13 @@ img {
   padding: 30px;
 }
 
+.synopsis p {
+  background-color: #191919;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 2%;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -41,7 +48,7 @@ a {
 
 .item {
   /* flex: 1;
-  flex-basis: 120px; */
+  flex-basis: 300px; */
   /* padding: 30px; */
   border: 1px solid black;
   position: relative;
