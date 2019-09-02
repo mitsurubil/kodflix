@@ -11,7 +11,7 @@ function Details(props) {
 
   useEffect(() => {
     setShowOrMovie(matchedShowOrMovie)
-  }, []);
+  }, [matchedShowOrMovie]);
   if (showOrMovie === undefined) {
     return <Redirect to='./not-found' />;
   } else {
