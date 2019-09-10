@@ -8,8 +8,10 @@ function Details(props) {
   const matchedShowOrMovie = getShowsAndMovies().find((showOrMovie) => {
     return showOrMovie.id === showOrMovieId
   });
-
   useEffect(() => {
+    // fetch('/rest/shows')
+    //   .then(response => response.json())
+    //   .then(shows => console.log(JSON.stringify(shows)));
     setShowOrMovie(matchedShowOrMovie)
   }, [matchedShowOrMovie]);
   if (showOrMovie === undefined) {
